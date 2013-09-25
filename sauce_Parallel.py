@@ -1,4 +1,3 @@
-# -*- coding: iso-8859-1 -*-
 import unittest, optparse, time, os
 from selenium import webdriver
 from array import *
@@ -59,7 +58,7 @@ def worker(l_browsers,s_suite,sauce_userid,sauce_apikey,sauce_video,sauce_screen
              job_queue.put(test.test_sauce())
              job_queue.put(test.tearDown())
              job_queue.put(unittest.TextTestRunner().run(s_suite))
-             print
+             
 if __name__ == '__main__':
       parser = optparse.OptionParser(usage='usage: %prog [options]')
       parser.set_defaults(
